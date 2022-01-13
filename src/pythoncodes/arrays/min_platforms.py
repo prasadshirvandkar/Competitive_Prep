@@ -28,4 +28,7 @@ if __name__ == '__main__':
     a1 = ['0900', '1100', '1135']
     d1 = ['1000', '1200', '1240']
 
-    min_platforms_needed_for_trains(a1, d1)
+    a2 = ['5', '0', '25', '35']
+    d2 = ['10', '20', '40', '45']
+
+    print(min_platforms_needed_for_trains(a2, d2))
