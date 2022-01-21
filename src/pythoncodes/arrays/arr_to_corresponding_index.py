@@ -1,5 +1,6 @@
-if __name__ == "__main__":
-    arr = [3, 2, 0, 1]
+def arr_to_corresponding_index(arr):
+    if __name__ == "__main__":
+        arr = [3, 2, 0, 1]
 
     ranks = {}
     for i in range(len(arr)):
@@ -11,4 +12,9 @@ if __name__ == "__main__":
         if i in ranks:
             new_arr.append(ranks[i])
 
-    print(new_arr)
+    return new_arr
+
+
+if __name__ == '__main__':
+    nums = [3, 2, 0, 1]
+    print(arr_to_corresponding_index(nums))
