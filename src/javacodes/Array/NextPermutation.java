@@ -1,7 +1,6 @@
 package javacodes.Array;
 
 public class NextPermutation {
-
     static void swap(int[] nums, int i, int j) {
         int temp = nums[i];
         nums[i] = nums[j];

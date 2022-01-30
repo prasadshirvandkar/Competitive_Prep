@@ -15,11 +15,15 @@ def min_diff_subset_sum(nums):
                 i_dp.append(dp[i - 1][j] or dp[i - 1][j - nums[i - 1]])
         dp.append(i_dp)
 
+    print(dp[-1])
+
     mini = sm
     for i in range(len(dp[-1]) // 2):
         if dp[-1][i] == 1:
             mini = min(sm - i, mini)
 
+    print(mini)
+    print(sm)
     return mini - (sm - mini)
 
 

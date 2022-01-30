@@ -18,8 +18,22 @@ def house_robber(nums):
     return max_till
 
 
+def house_robber_rec(nums, i):
+    if i == 0:
+        return nums[i]
+
+    if i < 0:
+        return 0
+
+    pick = nums[i] + house_robber_rec(nums, i - 2)
+    not_pick = 0 + house_robber_rec(nums, i - 1)
+
+    return max(pick, not_pick)
+
+
 if __name__ == '__main__':
     arr = [2, 7, 9, 3, 1]
     arr1 = [1, 11, 1, 1, 10]
     arr2 = [2, 1, 1, 2]
-    print(house_robber(arr))
+    print(house_robber(arr1))
+    print(house_robber_rec(arr1, len(arr1) - 1))
