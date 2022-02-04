@@ -1,3 +1,5 @@
+# This code finds out if the Sudoku Matrix is a Valid Sudoku or Not
+
 def valid_sudoku(board):
     rows, cols, blocks = [set() for _ in range(9)], [set() for _ in range(9)], [set() for _ in range(9)]
     row_num = -3
